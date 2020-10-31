@@ -23,7 +23,7 @@ module.exports = {
       provider: function () {
         var wallet = new HDWalletProvider(
           DEV_MNEMONIC,
-          'https://kovan.infura.io/v3/e16ecf41380f442987d31e736990fed2',
+          'https://ropsten.infura.io/v3/e16ecf41380f442987d31e736990fed2',
           0,
           1000,
         ); 

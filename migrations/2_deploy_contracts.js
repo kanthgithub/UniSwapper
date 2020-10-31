@@ -1,4 +1,3 @@
-const PerlinRoboAdvisorV1 = artifacts.require('./PerlinRoboAdvisorV1.sol');
 const lakshmiToken = artifacts.require('./LakshmiToken.sol')
 
 module.exports = function (deployer, network, accounts) {
