@@ -240,8 +240,9 @@ sent 0x36d2688d61d8137329b5bfb73ac5dcb6cc4e443462507026903ef2021ffaf40e
 
 ![UniSwap_Swap_ETH_For_ERC20_Token](./images/UniSwap_Swap_ETH_For_ERC20_Token.png)
  
-
+-----
 ### Step-6: Buyer with LakshmiKanthToken Assets will exchange LakshmiKanth-Token for the Link Tokens
+-----
 
  - Run command to swap ERC20 Tokens
 
@@ -257,7 +258,6 @@ sent 0x36d2688d61d8137329b5bfb73ac5dcb6cc4e443462507026903ef2021ffaf40e
 - Etherscan Proofs:
 
   - transactionHash: 0xbf44f4d342a9e3ba1ce38f7841dc22b94273bff4f866750fc95b036c6b31b5db
-  - Etherscan URL: 
 
 
 
