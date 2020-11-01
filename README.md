@@ -1,9 +1,9 @@
 # UniSwapper
 
 ## Purpose:
------
-Swap Token Assets on Uniswap 
 
+Swap Token Assets on Uniswap 
+-----
 ## How UniSwap works?
 ```
 Uniswap is made up of a series of ETH-ERC20 exchange contracts.
@@ -39,9 +39,9 @@ intermediary allowing direct ERC20-ERC20 trades in a single transaction.
 Users can specify a recipient address if they want to receive purchased tokens 
 at a different address from the one used to make a transaction.
 ```
-
-## Use case:
 -----
+## Use case:
+
 1. I have my token named as LAKSHMI_KANTH_TOKEN
 
    Ropsten: 
