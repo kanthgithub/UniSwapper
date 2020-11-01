@@ -1,10 +1,10 @@
 # UniSwapper
 
 ## Purpose:
+-----
 Swap Token Assets on Uniswap 
 
 ## How UniSwap works?
-
 ```
 Uniswap is made up of a series of ETH-ERC20 exchange contracts.
 
@@ -41,7 +41,7 @@ at a different address from the one used to make a transaction.
 ```
 
 ## Use case:
-
+-----
 1. I have my token named as LAKSHMI_KANTH_TOKEN
 
    Ropsten: 
@@ -64,7 +64,7 @@ at a different address from the one used to make a transaction.
 
 
 ## Testnet 
-
+-----
  - We will be using Ropsten testnet for deployment of Token and Exchange Contracts
  - Deployer address and privateKey are provided here. 
    - As this is only tesnet, i am providing keys here
@@ -85,7 +85,7 @@ const OWNER_PRIVATE_KEY = '7b686b07e74fb5669b45a3eedb03b7af7ca69763b2a1a941815d2
   ```
 
 ## Usecase Details & Execution Steps:
-
+-----
 1. Create an Exchange-Contract for LakshmiKanth Token
 2. Verify if the UniSwap-Exchange-Contract_LakshmiKanth_Token has-been created successfully by querying the Uniswap-Exchange-Factory Contract
 3. Approve the Spending of LakshmiKanth Token for UniSwap-Exchange-Contract_LakshmiKanth_Token
@@ -193,7 +193,7 @@ EtherScan Logs: https://ropsten.etherscan.io/tx/0x0ab34bb2e07369d6a38513f8a1f366
 ![Add Liquidity For LakshmiKanthToken To UniSwap-V1-Exchange-Contract](./images/Add_Liquidity_LakshmiKanth_To_UniSwap-V1-Exchange-Contract.png)
 
 ## Step-5: Buyer with a walletAddress will exchange ETH for LakshmiKanth Token
-
+-----
 - Command to execute:
 
 ```sh
