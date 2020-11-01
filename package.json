@@ -9,8 +9,8 @@
   "scripts": {
     "test": "truffle test",
     "solium:lint": "solium lint -d ./contracts",
-    "migrate": "rimraf -rf ./build/contracts && export INSTANCE_ID=local && truffle migrate --network development --reset",
-    "console": "truffle console",
+    "migrate": "rimraf -rf ./build/contracts && truffle migrate --network ropsten_infura",
+    "console": "truffle console --network ropsten_infura",
     "dev": "truffle develop",
     "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
   },
