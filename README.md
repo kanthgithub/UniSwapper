@@ -347,7 +347,7 @@ Summary
 - Event Emitted from AddLiquidity Function Call:
 
     |#|	Name |	Type |	Data|
-    | --- | --- |
+    | --- | --- |--- |--- |
     |0|	min_liquidity|	uint256| 1 |
     |1|	max_tokens   |	uint256| 15000000000000000000|
     |2|	deadline     |	uint256| 1742680400|
