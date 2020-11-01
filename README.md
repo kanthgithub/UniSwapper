@@ -41,6 +41,7 @@ at a different address from the one used to make a transaction.
 ```
 -----
 ## Use case:
+-----
 
 1. I have my token named as LAKSHMI_KANTH_TOKEN
 
@@ -62,9 +63,10 @@ at a different address from the one used to make a transaction.
 
 7. We will showcase on how user can swap their LAKSHMI_TOKEN for a LINK_TOKEN
 
-
+-----
 ## Testnet 
 -----
+
  - We will be using Ropsten testnet for deployment of Token and Exchange Contracts
  - Deployer address and privateKey are provided here. 
    - As this is only tesnet, i am providing keys here
@@ -84,8 +86,10 @@ const OWNER_PRIVATE_KEY = '7b686b07e74fb5669b45a3eedb03b7af7ca69763b2a1a941815d2
     https://ropsten.etherscan.io/address/0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351
   ```
 
+-----
 ## Usecase Details & Execution Steps:
 -----
+
 1. Create an Exchange-Contract for LakshmiKanth Token
 2. Verify if the UniSwap-Exchange-Contract_LakshmiKanth_Token has-been created successfully by querying the Uniswap-Exchange-Factory Contract
 3. Approve the Spending of LakshmiKanth Token for UniSwap-Exchange-Contract_LakshmiKanth_Token
@@ -104,7 +108,9 @@ const OWNER_PRIVATE_KEY = '7b686b07e74fb5669b45a3eedb03b7af7ca69763b2a1a941815d2
 
  - This Usecase contains execution of 5 scripts in Sequence to simulate the 7 Steps mentioned above:
 
+-----
 ### Step-1: Script to create new Exchange-Contract from Factory:
+-----
 
  - Run javaScript file: 
 
@@ -127,7 +133,9 @@ const OWNER_PRIVATE_KEY = '7b686b07e74fb5669b45a3eedb03b7af7ca69763b2a1a941815d2
 
    - Etherscan for Exchange Contract: https://ropsten.etherscan.io/address/0x0da1e0d8ca4364f944bd98ac4d7760d574a12797
 
+-----
 ### Step-2: Verify if the Exchange-Contract has-been created by querying the Uniswap-Exchange-Factory Contract
+-----
 
  - Execute command to Query the ExchangeContract Address for LakshmiKanthToken
 ```sh
@@ -141,7 +149,9 @@ const OWNER_PRIVATE_KEY = '7b686b07e74fb5669b45a3eedb03b7af7ca69763b2a1a941815d2
     Exchange Address for LakshmiKanth Token in previous Step is: 0x0da1e0d8ca4364f944bd98ac4d7760d574a12797
 ```
 
+-----
 ### Step-3: Approve the Spending of LakshmiKanth Token for UniSwap Exchange-Contract of LakshmiKanth Token
+-----
 
  - This is also considered as adding liquidity to Uniswap-Exchange-Contract
 
@@ -157,8 +167,10 @@ const OWNER_PRIVATE_KEY = '7b686b07e74fb5669b45a3eedb03b7af7ca69763b2a1a941815d2
 
  - Etherscan:  https://ropsten.etherscan.io/tx/0x798d058e3bfa7f997e4946cbdea2e284e425c4dbcf583ecace48fb2b9de056aa#eventlog
 
-
+-----
 ### Step-4: Add Liquidity of LakshmiKanth Token and some ETH to the Exchange-Contract of LakshmiKanth Token
+-----
+
 
  - LakshmiKanthTokens as well as ETH will be added as Liquidity to the Exchange Token Contract
 
@@ -192,8 +204,10 @@ EtherScan Logs: https://ropsten.etherscan.io/tx/0x0ab34bb2e07369d6a38513f8a1f366
 
 ![Add Liquidity For LakshmiKanthToken To UniSwap-V1-Exchange-Contract](./images/Add_Liquidity_LakshmiKanth_To_UniSwap-V1-Exchange-Contract.png)
 
+-----
 ## Step-5: Buyer with a walletAddress will exchange ETH for LakshmiKanth Token
 -----
+
 - Command to execute:
 
 ```sh
