@@ -269,7 +269,7 @@ Summary
 
     |#|	FileName |	Addresses |	Description|
     | --- | --- |--- |--- |
-    |0| (scripts/CreateUniswapTokenExchangeContract.js) |	| Create a Uniswap-Exchange-Contract for ERC20 Token |
+    |0| [CreateUniswapTokenExchangeContract](./scripts/CreateUniswapTokenExchangeContract.js) |	| Create a Uniswap-Exchange-Contract for ERC20 Token |
     |1|	(scripts/QueryUniswapTokenExchangeContract.js)   |	| Query the Exchange-Contract address using Uniswap Exchange Factory Contract|
     |3|	(scripts/ApproveTokenSpendingForUniswapExchangeContract.js)     |	| Approve Spending of ERC20 token for the Exchange-Contract|
     |4|	(scripts/AddLiquidityToExchangeContract.js)     |	| Add Liquidity ERC20, ETH to the ERC20-Exchange-Contract|
