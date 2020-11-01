@@ -75,3 +75,10 @@ Summary
 =======
 > Total deployments:   2
 > Final cost:          0.06674826 ETH
+
+
+- Etherscan for Events emitted during token creation:
+
+  https://ropsten.etherscan.io/tx/0x17d78eda02f46addcacba47056af88008cb692c56907fb0ce81e7a54b5222216
+
+  
