@@ -270,11 +270,11 @@ Summary
     |#|	FileName |	Addresses |	Description|
     | --- | --- |--- |--- |
     |0| [CreateUniswapTokenExchangeContract](./scripts/CreateUniswapTokenExchangeContract.js) |	| Create a Uniswap-Exchange-Contract for ERC20 Token |
-    |1|	(scripts/QueryUniswapTokenExchangeContract.js)   |	| Query the Exchange-Contract address using Uniswap Exchange Factory Contract|
-    |3|	(scripts/ApproveTokenSpendingForUniswapExchangeContract.js)     |	| Approve Spending of ERC20 token for the Exchange-Contract|
-    |4|	(scripts/AddLiquidityToExchangeContract.js)     |	| Add Liquidity ERC20, ETH to the ERC20-Exchange-Contract|
-    |5|	(./scripts/SwapETHForERC20Token.js)    |	| User to sell ETH and buy ERC20 Token available on ERC20-Exchange-Contract|
-    |6|	(scripts/SwapERC20ForERC20Token.js)     |	| User to swap ERC20 token for another ERC20 token|
+    |1|	[QueryUniswapTokenExchangeContract](./scripts/QueryUniswapTokenExchangeContract.js)   |	| Query the Exchange-Contract address using Uniswap Exchange Factory Contract|
+    |3|	[ApproveTokenSpendingForUniswapExchangeContract](./scripts/ApproveTokenSpendingForUniswapExchangeContract.js)     |	| Approve Spending of ERC20 token for the Exchange-Contract|
+    |4|	[AddLiquidityToExchangeContract](./scripts/AddLiquidityToExchangeContract.js)     |	| Add Liquidity ERC20, ETH to the ERC20-Exchange-Contract|
+    |5|	[SwapETHForERC20Token](./scripts/SwapETHForERC20Token.js)    |	| User to sell ETH and buy ERC20 Token available on ERC20-Exchange-Contract|
+    |6|	[SwapERC20ForERC20Token](.scripts/SwapERC20ForERC20Token.js)     |	| User to swap ERC20 token for another ERC20 token|
 SwapETHForERC20Token
 -----
 ### Step-1: Script to create new Exchange-Contract from Factory:
