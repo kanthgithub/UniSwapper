@@ -25,10 +25,10 @@
    - Uniswap-V1 will exchange LakshmiKanthToken for ETH, then it will communicate with Exchange-Contract of Link Token
    - Uniswap-V1 will then exchange ETH for LINK tokens
 
-7. UniSwap-V1 has a 2 step process to exchange ERC20 (Token-A) <-> ERC20 (Token-B)
+   - UniSwap-V1 has a 2 step process to exchange ERC20 (Token-A) <-> ERC20 (Token-B)
 
-   i. Exchange ERC20 (Token-A) for ETH on Exchange-Token-Contract of Token-A
-   ii. Exchange ETH for ERC20 (Token-B) on Exchange-Token-Contract of Token-B
+      i. Exchange ERC20 (Token-A) for ETH on Exchange-Token-Contract of Token-A
+      ii. Exchange ETH for ERC20 (Token-B) on Exchange-Token-Contract of Token-B
 
 
  - This Usecase contains execution of 5 scripts in Sequence to simulate the 7 Steps mentioned above:
@@ -121,7 +121,7 @@ EtherScan Logs: https://ropsten.etherscan.io/tx/0x0ab34bb2e07369d6a38513f8a1f366
 
 ![Add Liquidity For LakshmiKanthToken To UniSwap-V1-Exchange-Contract](./images/Add_Liquidity_LakshmiKanth_To_UniSwap-V1-Exchange-Contract.png)
 
-## Step-5:
+## Step-5: Buyer with a walletAddress will exchange ETH for LakshmiKanth Token
 
 - Command to execute:
 
@@ -156,7 +156,24 @@ sent 0x36d2688d61d8137329b5bfb73ac5dcb6cc4e443462507026903ef2021ffaf40e
 ![UniSwap_Swap_ETH_For_ERC20_Token](./images/UniSwap_Swap_ETH_For_ERC20_Token.png)
  
 
- 
+## Step-6: Buyer with LakshmiKanthToken Assets will exchange LakshmiKanth-Token for the Link Tokens
+
+ - Run command to swap ERC20 Tokens
+
+ ```sh
+    node scripts/SwapERC20ForERC20Token.js 
+ ```
+
+ - Terminal Logs:
+ ```
+ sent 0xbf44f4d342a9e3ba1ce38f7841dc22b94273bff4f866750fc95b036c6b31b5db
+ ```
+
+- Etherscan Proofs:
+
+  - transactionHash: 0xbf44f4d342a9e3ba1ce38f7841dc22b94273bff4f866750fc95b036c6b31b5db
+  - Etherscan URL: 
+
 
 
 
