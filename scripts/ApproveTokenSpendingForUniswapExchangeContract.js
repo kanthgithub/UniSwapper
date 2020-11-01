@@ -49,7 +49,6 @@ web3.eth.getTransactionCount(transactionMaker).then(txCount => {
     data: encodedABI,
   }
 
-  // fire away!
   sendSigned(txData, function(err, result) {
     if (err) return console.log('error', err)
     console.log('sent', result)
