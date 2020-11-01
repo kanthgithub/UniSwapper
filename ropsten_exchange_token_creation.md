@@ -16,12 +16,13 @@
 ## Usecase Details & Execution Steps:
 
 1. Create an Exchange-Contract for LakshmiKanth Token
-2. Verify if the Exchange-Contract has-been created successfully by querying the Uniswap-Exchange-Factory Contract
-3. Approve the Spending of LakshmiKanth Token for UniSwap Exchange-Contract of LakshmiKanth Token
-4. Add Liquidity of LakshmiKanth Token and some ETH to the Exchange-Contract of LakshmiKanth Token
+2. Verify if the UniSwap-Exchange-Contract_LakshmiKanth_Token has-been created successfully by querying the Uniswap-Exchange-Factory Contract
+3. Approve the Spending of LakshmiKanth Token for UniSwap-Exchange-Contract_LakshmiKanth_Token
+4. Add Liquidity of LakshmiKanth Token and some ETH to the UniSwap-Exchange-Contract_LakshmiKanth_Token
 5. Buyer with a walletAddress will exchange ETH for LakshmiKanth Token
 6. Buyer with LakshmiKanthToken Assets will exchange LakshmiKanth-Token for the Link Tokens
-   - Uniswap-V1 will take LakshmiKanthToken for ETH, then it will communicate with Exchange-Contract of Link Token
+   - Buyer will allow approval of spending of Lakshmikanth-Token to UniSwap-Exchange-Contract_LakshmiKanth_Token
+   - Uniswap-V1 will exchange LakshmiKanthToken for ETH, then it will communicate with Exchange-Contract of Link Token
    - Uniswap-V1 will then exchange ETH for LINK tokens
 
 7. UniSwap-V1 has a 2 step process to exchange ERC20 (Token-A) <-> ERC20 (Token-B)
@@ -119,6 +120,43 @@ EtherScan Logs: https://ropsten.etherscan.io/tx/0x0ab34bb2e07369d6a38513f8a1f366
 ### Verify the Funding of Tokens to ExchangeContract
 
 ![Add Liquidity For LakshmiKanthToken To UniSwap-V1-Exchange-Contract](./images/Add_Liquidity_LakshmiKanth_To_UniSwap-V1-Exchange-Contract.png)
+
+## Step-5:
+
+- Command to execute:
+
+```sh
+ node scripts/SwapETHForERC20Token.js 
+```
+
+- terminal Logs:
+
+```
+etherToSpendForERC20: 0xb1a2bc2ec50000 - inEth: 0.05
+sent 0x36d2688d61d8137329b5bfb73ac5dcb6cc4e443462507026903ef2021ffaf40e
+```
+
+- Etherscan Proofs:
+
+ - transactionHash: 0x36d2688d61d8137329b5bfb73ac5dcb6cc4e443462507026903ef2021ffaf40e
+ - Etherscan Link: https://ropsten.etherscan.io/tx/0x36d2688d61d8137329b5bfb73ac5dcb6cc4e443462507026903ef2021ffaf40e
+ - InputData for function from EtherscaN:
+
+ ```
+ Function: ethToTokenSwapInput(uint256 min_tokens, uint256 deadline) ***
+
+    MethodID: 0xf39b5b9b
+    [0]:  0000000000000000000000000000000000000000000000000000000000000001
+    [1]:  0000000000000000000000000000000000000000000000000000000067df3150
+ ``` 
+
+
+ ### Verify the Token transfer transaction on Etherscan (Tonken Tracker: Uniswap V1)
+
+![UniSwap_Swap_ETH_For_ERC20_Token](./images/UniSwap_Swap_ETH_For_ERC20_Token.png)
+ 
+
+ 
 
 
 
