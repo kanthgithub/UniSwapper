@@ -265,8 +265,16 @@ Summary
 -----
 - 6 Javascript files are programmed to execute all the 6 steps listed in Use-Case described in next Section
 
+ - source directory: all JS files are under `scripts/`  of root directory
 
-
+    |#|	FileName |	Addresses |	Description|
+    | --- | --- |--- |--- |
+    |0|	CreateUniswapTokenExchangeContract.js|	| Create a Uniswap-Exchange-Contract for ERC20 Token |
+    |1|	QueryUniswapTokenExchangeContract.js   |	| Query the Exchange-Contract address using Uniswap Exchange Factory Contract|
+    |3|	ApproveTokenSpendingForUniswapExchangeContract.js     |	| Approve Spending of ERC20 token for the Exchange-Contract|
+    |4|	AddLiquidityToExchangeContract.js     |	| Add Liquidity ERC20, ETH to the ERC20-Exchange-Contract|
+    |5|	SwapERC20ForERC20Token.js     |	| User to sell ETH and buy ERC20 Token available on ERC20-Exchange-Contract|
+    |6|	SwapETHForERC20Token.js.js     |	| User to swap ERC20 token for another ERC20 token|
 
 -----
 ### Step-1: Script to create new Exchange-Contract from Factory:
