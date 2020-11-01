@@ -1,27 +1,38 @@
 
-# Create Token-Exchange-Contract in Uniswap V1
+# Token-Exchange-Contract Interactions on Uniswap-V1
 
 ## Introduction:
 
+### Uniswap V1:
+
  - Uniswap Factory contract has been deployed by Uniswap on Ropsten.
  - Its ABI and code can be found in the ./abi directory of this project
+ - Uniswap Factory Contract on Ropsten:
+    ```js
+    const ropsten = '0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351'
+    https://ropsten.etherscan.io/address/0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351
+    ```
 
- - contract Addresses on Ropsten:
+## Usecase Details & Execution Steps:
 
-  - Uniswap Factory Contract on Ropsten:
+1. Create an Exchange-Contract for LakshmiKanth Token
+2. Verify if the Exchange-Contract has-been created successfully by querying the Uniswap-Exchange-Factory Contract
+3. Approve the Spending of LakshmiKanth Token for UniSwap Exchange-Contract of LakshmiKanth Token
+4. Add Liquidity of LakshmiKanth Token and some ETH to the Exchange-Contract of LakshmiKanth Token
+5. Buyer with a walletAddress will exchange ETH for LakshmiKanth Token
+6. Buyer with LakshmiKanthToken Assets will exchange LakshmiKanth-Token for the Link Tokens
+   - Uniswap-V1 will take LakshmiKanthToken for ETH, then it will communicate with Exchange-Contract of Link Token
+   - Uniswap-V1 will then exchange ETH for LINK tokens
 
-```js
-const ropsten = '0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351'
-https://ropsten.etherscan.io/address/0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351
-```
+7. UniSwap-V1 has a 2 step process to exchange ERC20 (Token-A) <-> ERC20 (Token-B)
 
-  - Create a Token pair from etherscan:
+   i. Exchange ERC20 (Token-A) for ETH on Exchange-Token-Contract of Token-A
+   ii. Exchange ETH for ERC20 (Token-B) on Exchange-Token-Contract of Token-B
 
-```js
-    https://ropsten.etherscan.io/address/0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351#writeContract
-```
 
-## Script to create new Exchange-Contract from Factory:
+ - This Usecase contains execution of 5 scripts in Sequence to simulate the 7 Steps mentioned above:
+
+## Step-1: Script to create new Exchange-Contract from Factory:
 
  - Run javaScript file: 
 
@@ -29,7 +40,7 @@ https://ropsten.etherscan.io/address/0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351
     node ./scripts/CreateUniswapTokenExchangeContract.js
 ```
 
-## Script Execution Log:
+### Script Execution Log:
 
  - Ropsten Etherscan for Exchange-Contract creation:
 
@@ -44,28 +55,38 @@ https://ropsten.etherscan.io/address/0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351
 
    - Etherscan for Exchange Contract: https://ropsten.etherscan.io/address/0x0da1e0d8ca4364f944bd98ac4d7760d574a12797
 
-## Query created Exchange
+## Step-2: Verify if the Exchange-Contract has-been created by querying the Uniswap-Exchange-Factory Contract
 
+ - Execute command to Query the ExchangeContract Address for LakshmiKanthToken
 ```sh
-lakshmikanth-MacBook-Pro:UniSwapper lakshmikanth$ node scripts/QueryUniswapTokenExchangeContract.js 
-output of  exchange-address-Query for LakshmiKanth token is: 0x0DA1e0d8ca4364F944bD98AC4D7760D574a12797
-Exchange Address for LakshmiKanth Token in previous Step is: 0x0da1e0d8ca4364f944bd98ac4d7760d574a12797
+    node scripts/QueryUniswapTokenExchangeContract.js 
 ```
 
-## Aprove LakshmiKanthToken Spending for Uniswap-Exchange-Contract-Address of LakshmiKanthToken
+- Terminal Logs:
+
+```
+    output of  exchange-address-Query for LakshmiKanth token is: 0x0DA1e0d8ca4364F944bD98AC4D7760D574a12797
+    Exchange Address for LakshmiKanth Token in previous Step is: 0x0da1e0d8ca4364f944bd98ac4d7760d574a12797
+```
+
+## Step-3: Approve the Spending of LakshmiKanth Token for UniSwap Exchange-Contract of LakshmiKanth Token
 
  - This is also considered as adding liquidity to Uniswap-Exchange-Contract
 
- ```js
- lakshmikanth-MacBook-Pro:UniSwapper lakshmikanth$ node scripts/ApproveTokenSpendingForUniswapExchangeContract.js 
-(node:53484) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
-sent 0x798d058e3bfa7f997e4946cbdea2e284e425c4dbcf583ecace48fb2b9de056aa
+ ```sh
+    node scripts/ApproveTokenSpendingForUniswapExchangeContract.js 
+ ```
+
+ - Terminal Log:
+
+ ```
+    sent 0x798d058e3bfa7f997e4946cbdea2e284e425c4dbcf583ecace48fb2b9de056aa
  ```
 
  - Etherscan:  https://ropsten.etherscan.io/tx/0x798d058e3bfa7f997e4946cbdea2e284e425c4dbcf583ecace48fb2b9de056aa#eventlog
 
 
-## Add Liquidity to ExchangeContract
+## Step-4: Add Liquidity of LakshmiKanth Token and some ETH to the Exchange-Contract of LakshmiKanth Token
 
  - LakshmiKanthTokens as well as ETH will be added as Liquidity to the Exchange Token Contract
 
@@ -76,7 +97,6 @@ sent 0x798d058e3bfa7f997e4946cbdea2e284e425c4dbcf583ecace48fb2b9de056aa
  - Terminal Logs:
 
  ```
- (node:61651) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
  sent 0x0ab34bb2e07369d6a38513f8a1f3664e761ae516acca13ab6f3ef903e45f199b
  ```
 
@@ -98,9 +118,7 @@ EtherScan Logs: https://ropsten.etherscan.io/tx/0x0ab34bb2e07369d6a38513f8a1f366
 
 ### Verify the Funding of Tokens to ExchangeContract
 
- [Add_Liquidity_LakshmiKanth_To_UniSwap-V1-Exchange-Contract.png]
-
-![dd_Liquidity_LakshmiKanth_To_UniSwap-V1-Exchange-Contract](./images/Add_Liquidity_LakshmiKanth_To_UniSwap-V1-Exchange-Contract.png)
+![Add Liquidity For LakshmiKanthToken To UniSwap-V1-Exchange-Contract](./images/Add_Liquidity_LakshmiKanth_To_UniSwap-V1-Exchange-Contract.png)
 
 
 
