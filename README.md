@@ -105,6 +105,139 @@ const OWNER_PRIVATE_KEY = '7b686b07e74fb5669b45a3eedb03b7af7ca69763b2a1a941815d2
   ```
 
 -----
+## Pre-Requisites for Project:
+-----
+
+1. node > version 10
+2. npm / yarn
+3. truffle
+
+- install all dependencies essential for project
+
+```shell
+ yarn
+```
+
+-----
+## Deploy an ERC20 token - LakshmiKanthToken to Ropsten
+-----
+
+1. Create a Simple ERC20 Token contract
+
+```js
+contract LakshmiKanthToken is Ownable, ERC20Detailed, ERC20Capped {
+
+    using SafeMath for uint256;
+
+     uint256 CAP = 1000000000;
+     uint256 TOTALSUPPLY = CAP.mul(10 ** 18);
+
+	constructor()
+		public
+		ERC20Detailed('LakshmiKanthToken', 'LAKSHMI_KANTH_TOKEN', 18)
+		ERC20Capped(TOTALSUPPLY)
+		Ownable()
+	{
+		_mint(msg.sender, TOTALSUPPLY);
+	}
+}
+```
+
+2. Deploy to Ropsten using truffle framework
+
+```shell
+$ truffle migrate 
+```
+
+3. Console log
+
+```js
+lakshmikanth-MacBook-Pro:UniSwapper lakshmikanth$ truffle migrate --reset --network ropsten_infura
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/LakshmiKanthToken.sol
+> Artifacts written to /Users/lakshmikanth/Documents/finxflow/UniSwapper/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'ropsten_infura'
+> Network id:      3
+> Block gas limit: 8000000 (0x7a1200)
+
+
+1_initial_migration.js
+======================
+1_initial_migration:  ropsten_infura
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x2019697efa0fbd64c3f9fd6082f99d0376d06883939c64d47cdfc53e4c4f7ca4
+   > Blocks: 1            Seconds: 21
+   > contract address:    0x9c8EFEa9201294d39b04d336A7Ae31512A9302a0
+   > block number:        8982935
+   > block timestamp:     1604193534
+   > account:             0x1c4411c670Ef6c3B1009B5D13C3822b977b52ce1
+   > balance:             0.92440753
+   > gas used:            225225 (0x36fc9)
+   > gas price:           30 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00675675 ETH
+
+   Pausing for 1 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 8982936)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00675675 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'LakshmiKanthToken'
+   -----------------------------
+   > transaction hash:    0x17d78eda02f46addcacba47056af88008cb692c56907fb0ce81e7a54b5222216
+   > Blocks: 2            Seconds: 13
+   > contract address:    0x832f1854532927A061790E8d1E432C66985ecA29
+   > block number:        8982941
+   > block timestamp:     1604193598
+   > account:             0x1c4411c670Ef6c3B1009B5D13C3822b977b52ce1
+   > balance:             0.86314513
+   > gas used:            1999717 (0x1e8365)
+   > gas price:           30 gwei
+   > value sent:          0 ETH
+   > total cost:          0.05999151 ETH
+
+   Pausing for 1 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 8982943)
+lakshmiKanthToken is deployed with Address: 0x832f1854532927A061790E8d1E432C66985ecA29
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.05999151 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.06674826 ETH
+
+
+- Etherscan for Events emitted during token creation:
+
+  https://ropsten.etherscan.io/tx/0x17d78eda02f46addcacba47056af88008cb692c56907fb0ce81e7a54b5222216
+```
+
+
+-----
 ## Usecase Details & Execution Steps:
 -----
 
@@ -125,6 +258,15 @@ const OWNER_PRIVATE_KEY = '7b686b07e74fb5669b45a3eedb03b7af7ca69763b2a1a941815d2
 
 
  - This Usecase contains execution of 5 scripts in Sequence to simulate the 7 Steps mentioned above:
+
+
+-----
+## Javascript files for Usecase:
+-----
+- 6 Javascript files are programmed to execute all the 6 steps listed in Use-Case described in next Section
+
+
+
 
 -----
 ### Step-1: Script to create new Exchange-Contract from Factory:
@@ -205,6 +347,7 @@ const OWNER_PRIVATE_KEY = '7b686b07e74fb5669b45a3eedb03b7af7ca69763b2a1a941815d2
 - Event Emitted from AddLiquidity Function Call:
 
     |#|	Name |	Type |	Data|
+    | --- | --- |
     |0|	min_liquidity|	uint256| 1 |
     |1|	max_tokens   |	uint256| 15000000000000000000|
     |2|	deadline     |	uint256| 1742680400|
