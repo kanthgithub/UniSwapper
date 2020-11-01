@@ -1,10 +1,9 @@
-# UniSwapper
+# UniSwapper - Swap Token Assets on Uniswap 
 
-## Purpose:
-
-Swap Token Assets on Uniswap 
 -----
 ## How UniSwap works?
+-----
+
 ```
 Uniswap is made up of a series of ETH-ERC20 exchange contracts.
 
@@ -15,13 +14,25 @@ anyone using the Uniswap factory contract.
 
 The factory serves as a public registry and is used to look up all token
 and exchange addresses added to the system.
+```
 
+-----
+## How UniSwap-Exchange Contract is operated?
+-----
+
+```
 Each exchange holds reserves of both ETH and its associated ERC20 token. 
 Anyone can become a liquidity provider on an exchange and contribute to its reserves. 
 
 This is different than buying or selling; it requires depositing
 an equivalent value of both ETH and the relevant ERC20 token. 
+```
 
+-----
+## How is liquidity handled in UniSwap-Exchange Contract?
+-----
+
+```
 Liquidity is pooled across all providers and an internal “pool token” (ERC20) 
 is used to track each providers relative contribution.
 
@@ -29,7 +40,13 @@ Pool tokens are minted when liquidity is deposited into the system and
 can be burned at any time to withdraw a proportional share of the reserves.
 
 Exchange contracts are automated market makers between an ETH-ERC20 pair. 
+```
 
+-----
+## How tokens are swapped using UniSwap-Exchange Contract?
+-----
+
+```
 Traders can swap between the two in either direction by adding to the
 liquidity reserve of one and withdrawing from the reserve of the other. 
 
@@ -39,6 +56,7 @@ intermediary allowing direct ERC20-ERC20 trades in a single transaction.
 Users can specify a recipient address if they want to receive purchased tokens 
 at a different address from the one used to make a transaction.
 ```
+
 -----
 ## Use case:
 -----
