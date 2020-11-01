@@ -1,0 +1,77 @@
+lakshmikanth-MacBook-Pro:UniSwapper lakshmikanth$ truffle migrate --reset --network ropsten_infura
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/LakshmiKanthToken.sol
+> Artifacts written to /Users/lakshmikanth/Documents/finxflow/UniSwapper/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'ropsten_infura'
+> Network id:      3
+> Block gas limit: 8000000 (0x7a1200)
+
+
+1_initial_migration.js
+======================
+1_initial_migration:  ropsten_infura
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0x2019697efa0fbd64c3f9fd6082f99d0376d06883939c64d47cdfc53e4c4f7ca4
+   > Blocks: 1            Seconds: 21
+   > contract address:    0x9c8EFEa9201294d39b04d336A7Ae31512A9302a0
+   > block number:        8982935
+   > block timestamp:     1604193534
+   > account:             0x1c4411c670Ef6c3B1009B5D13C3822b977b52ce1
+   > balance:             0.92440753
+   > gas used:            225225 (0x36fc9)
+   > gas price:           30 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00675675 ETH
+
+   Pausing for 1 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 8982936)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00675675 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'LakshmiKanthToken'
+   -----------------------------
+   > transaction hash:    0x17d78eda02f46addcacba47056af88008cb692c56907fb0ce81e7a54b5222216
+   > Blocks: 2            Seconds: 13
+   > contract address:    0x832f1854532927A061790E8d1E432C66985ecA29
+   > block number:        8982941
+   > block timestamp:     1604193598
+   > account:             0x1c4411c670Ef6c3B1009B5D13C3822b977b52ce1
+   > balance:             0.86314513
+   > gas used:            1999717 (0x1e8365)
+   > gas price:           30 gwei
+   > value sent:          0 ETH
+   > total cost:          0.05999151 ETH
+
+   Pausing for 1 confirmations...
+   ------------------------------
+   > confirmation number: 1 (block: 8982943)
+lakshmiKanthToken is deployed with Address: 0x832f1854532927A061790E8d1E432C66985ecA29
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.05999151 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.06674826 ETH

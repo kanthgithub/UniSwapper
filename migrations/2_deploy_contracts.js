@@ -1,8 +1,8 @@
-const lakshmiToken = artifacts.require('./LakshmiToken.sol')
+const lakshmiKanthToken = artifacts.require('./LakshmiKanthToken.sol')
 
 module.exports = function (deployer, network, accounts) {
   deployer.then(async () => {
-    const lakshmiTokenDeployedInstance = await deployer.deploy(lakshmiToken);
-    console.log(`lakshmiToken is deployed with Address: ${lakshmiTokenDeployedInstance.address}`);
+    const lakshmiKanthTokenDeployedInstance = await deployer.deploy(lakshmiKanthToken);
+    console.log(`lakshmiKanthToken is deployed with Address: ${lakshmiKanthTokenDeployedInstance.address}`);
   });
 };

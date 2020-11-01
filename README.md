@@ -5,7 +5,38 @@ Swap Token  Assets on Uniswap
 
 ## Use case:
 
-1. I have my token named as LAKSHMI_TOKEN
+### Use Case-1 On Uniswap-V1:
+
+- ERC20 / ERC20 Pairs: 
+  - In the first version any token had to be paired with ETH.
+  - To trade a token with another token, 
+  - one had to first exchange the first token into ETH and then use that ETH to purchase the other token. 
+
+#### Scenario-1:
+
+1. I as a User have ETH in my Ropsten Wallet
+
+2. I want to exchange ETH for DAI
+
+3. I will approve ETH spending for DAI tokens on DAI-ETH exchange Contract
+
+4. I swap ETH for DAI via DAI-Token-Exchange-Contract
+
+#### Scenario-2:
+
+1. I as a User have DAI in my Ropsten Wallet
+
+2. I want to exchange DAI for MKR
+
+3. I will approve ETH spending for DAI tokens on DAI-MKR exchange Contract
+
+4. I swap DAI for MKR via DAI-MKR-Exchange-Contract
+
+### Use Case-3:
+
+1. I have my token named as LAKSHMI_KANTH_TOKEN
+
+   Ropsten: https://ropsten.etherscan.io/address/0x832f1854532927a061790e8d1e432c66985eca29
 
 2. User can mint LAKSHMI_TOKEN using their ETH
 
@@ -27,14 +58,29 @@ Swap Token  Assets on Uniswap
 
  - We will be using Ropsten testnet for deployment of Token and Exchange Contracts
  - Deployer address and privateKey are provided here. 
+   - As this is only tesnet, i am providing keys here
+   - PLEASE DONT SHARE any mainnet Keys
 
 ```js
 const OWNER = '0x1c4411c670Ef6c3B1009B5D13C3822b977b52ce1';
 const OWNER_PRIVATE_KEY = '7b686b07e74fb5669b45a3eedb03b7af7ca69763b2a1a941815d210f3e1b5729';
 ```
 
-  - As this is only tesnet, i am providing keys here
-  - PLEASE DONT SHARE any mainnet Keys
+ - contract Addresses on Ropsten:
+
+  - Uniswap Factory Contract on Ropsten:
+
+  ```js
+    const ropsten = '0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351'
+    https://ropsten.etherscan.io/address/0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351
+  ```
+
+  - Create a Token pair from etherscan:
+
+  ```js
+  https://ropsten.etherscan.io/address/0x9c83dCE8CA20E9aAF9D3efc003b2ea62aBC08351#writeContract
+  ```
+
 
 
 ## How UniSwap works?

@@ -33,7 +33,7 @@ module.exports = {
         return wallet;
       },
       network_id: '*', // 3
-      gas: 9900000,
+      gas: 5000000,
       gasPrice: web3.utils.toWei('30', 'gwei'),
       confirmations: 1,
       skipDryRun: true,
@@ -43,7 +43,7 @@ module.exports = {
     compilers: {
       solc: {
         version: '0.6.6', // 0.5.13 // Fetch exact version from solc-bin (default: truffle's version)
-        docker: false, // Use "0.5.8" you've installed locally with docker (default: false)
+        docker: true, // Use "0.5.8" you've installed locally with docker (default: false)
         settings: {
           // See the solidity docs for advice about optimization and evmVersion
           optimizer: {
