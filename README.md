@@ -343,7 +343,7 @@ SwapETHForERC20Token
  - LakshmiKanthTokens as well as ETH will be added as Liquidity to the Exchange Token Contract
 
  ```sh
-  node scripts/AddLiquidityToExchangeContract.js
+  node command/AddLiquidityCommand.js
  ```
 
  - Terminal Logs:
