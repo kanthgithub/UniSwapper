@@ -3,7 +3,7 @@ const uniswapExchangeContractAbi = require('../abi/exchange.json');
 const TransactionHandler = require('../utils/TransactionHandler');
 
 const ApproveTokenSpendingForUniswapExchangeContract = {
-  approveTokenSpending: async () => {
+  approveTokenSpending: async (tokenQuantityForSpendingApproval) => {
     const contract = TransactionHandler.loadContract(
       uniswapExchangeContractAbi,
       process.env.exchangeContractAddress_LakshmiKanthToken
@@ -11,7 +11,7 @@ const ApproveTokenSpendingForUniswapExchangeContract = {
 
     //100 lakshmiKanth Tokens to be approved for spending by exchangeContractAddress_LakshmiKanthToken
     const lakshmiKanthTokenQuantityForApproval = TransactionHandler.toHex(
-      100 * 10 ** 18
+      tokenQuantityForSpendingApproval * 10 ** 18
     );
 
     const tx = contract.methods.approve(

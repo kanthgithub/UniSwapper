@@ -14,8 +14,8 @@ async function Main(callback) {
     // Pull the parameters from process arguments. Specifying them like this lets tests add its own.
     console.log(`ethForSpending in command trigger : ${argv.ethForSpending}`);
 
-    await swapETHForERC20(argv.ethForSpending);
-    console.log(`completed swapping ETH for ERC20 Script`);
+    const transactionHash = await swapETHForERC20(argv.ethForSpending);
+    console.log(`completed swapping ${argv.ethForSpending} ETH for ERC20 Script - in transaction: ${transactionHash}`);
   } catch (error) {
     console.error(error);
   }

@@ -271,7 +271,7 @@ Summary
     | --- | --- |--- |--- |--- |
     |0| [CreateUniswapTokenExchangeContract](./scripts/CreateUniswapTokenExchangeContract.js) | node commands/CreateUniswapTokenExchangeCommand.js |	| Create a Uniswap-Exchange-Contract for ERC20 Token |
     |1|	[QueryUniswapTokenExchangeContract](./scripts/QueryUniswapTokenExchangeContract.js)   |node commands/QueryUniswapTokenExchangeContractCommand.js || Query the Exchange-Contract address using Uniswap Exchange Factory Contract|
-    |3|	[ApproveTokenSpendingForUniswapExchangeContract](./scripts/ApproveTokenSpendingForUniswapExchangeContract.js)  |node commands/ApproveTokenSpendingCommand.js   |	| Approve Spending of ERC20 token for the Exchange-Contract|
+    |3|	[ApproveTokenSpendingForUniswapExchangeContract](./scripts/ApproveTokenSpendingForUniswapExchangeContract.js)  |node commands/ApproveTokenSpendingCommand.js --tokens=100 |	| Approve Spending of ERC20 token for the Exchange-Contract|
     |4|	[AddLiquidityToExchangeContract](./scripts/AddLiquidityToExchangeContract.js)  | node commands/AddLiquidityCommand.js --liquidity=1 |	| Add Liquidity ERC20, ETH to the ERC20-Exchange-Contract|
     |5|	[SwapETHForERC20Token](./scripts/SwapETHForERC20Token.js) | node commands/SwapETHForERC20Command.js  --ethForSpending=1|	| User to sell ETH and buy ERC20 Token available on ERC20-Exchange-Contract|
     |6|	[SwapERC20ForERC20Token](.scripts/SwapERC20ForERC20Token.js) | node commands/SwapERC20ForERC20Command.js  --receivableERC20Address='0x20fE562d797A42Dcb3399062AE9546cd06f63280' --maxLinkTokensForPurchase= '100' --maxLinkTokensForSale= '1000000000' --maxEthForSpending= '1'  |	| User to swap ERC20 token for another ERC20 token|
@@ -324,13 +324,13 @@ SwapETHForERC20Token
  - This is also considered as adding liquidity to Uniswap-Exchange-Contract
 
  ```sh
-    node commands/ApproveTokenSpendingCommand.js 
+    node commands/ApproveTokenSpendingCommand.js --tokens=100
  ```
 
  - Terminal Log:
 
  ```
-    sent 0x798d058e3bfa7f997e4946cbdea2e284e425c4dbcf583ecace48fb2b9de056aa
+completed Spending-Approval of 100 - with transactionHash: 0x7e0495dafefc607908c90c971cce784e0fb07cdc7cfb9cd83e72dbe01742e4b7
  ```
 
  - Etherscan:  https://ropsten.etherscan.io/tx/0x798d058e3bfa7f997e4946cbdea2e284e425c4dbcf583ecace48fb2b9de056aa#eventlog

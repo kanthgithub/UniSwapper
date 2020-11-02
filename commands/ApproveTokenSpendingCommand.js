@@ -1,11 +1,11 @@
 const ApproveTokenSpendingForUniswapExchangeContract = require('../scripts/ApproveTokenSpendingForUniswapExchangeContract');
 
 const argv = require("minimist")(process.argv.slice(), {
-  string: ["tokenAddress"]
+  int: ["tokens"]
 });
 
-async function approveTokenSpending(){
-  return await ApproveTokenSpendingForUniswapExchangeContract.approveTokenSpending();
+async function approveTokenSpending(tokenQuantityForSpendingApproval){
+  return await ApproveTokenSpendingForUniswapExchangeContract.approveTokenSpending(tokenQuantityForSpendingApproval);
 }
 
 // Implement async callback to enable the script to be run by truffle or node.
@@ -13,8 +13,8 @@ async function Main(callback) {
 
 try {
     // Pull the parameters from process arguments. Specifying them like this lets tests add its own.
-    const result = await approveTokenSpending();
-    console.log(`completed approve token Spending Script with transactionHash: ${result}`);
+    const result = await approveTokenSpending(argv.tokens);
+    console.log(`completed Spending-Approval of ${argv.tokens} - with transactionHash: ${result}`);
   } catch (error) {
     console.error(error);
   }
