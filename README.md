@@ -376,6 +376,8 @@ EtherScan Logs: https://ropsten.etherscan.io/tx/0xaff9a02459ba51eb29049cc7ecbfc1
 
 ![Add Liquidity For LakshmiKanthToken To UniSwap-V1-Exchange-Contract](./images/Add_Liquidity_LakshmiKanth_To_UniSwap-V1-Exchange-Contract.png)
 
+![AddLiquidity_FundingProof_of_Token_To_ContractExchange](./images/AddLiquidity_FundingProof_of_Token_To_ContractExchange.png)
+
 -----
 ## Step-5: Buyer with a walletAddress will exchange ETH for LakshmiKanth Token
 -----
