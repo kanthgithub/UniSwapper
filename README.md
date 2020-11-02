@@ -349,8 +349,8 @@ completed Spending-Approval of 100 - with transactionHash: 0x7e0495dafefc607908c
  - Terminal Logs:
 
  ```
-Successfully Added liquidity: 1 and transactionHash is: 0x838d0544bf7c1e8550aec689284992411899180779e5b2303b1cab09cadb4420
- ```
+Successfully Added liquidity: 15 and transactionHash is: 0xaff9a02459ba51eb29049cc7ecbfc1b3cf1090c6a442b31ef2266246cd3b3f0a
+```
 
 - Event Emitted from AddLiquidity Function Call:
 
@@ -364,10 +364,13 @@ minimum Liquidity: 1
 maximum Tokens: 15 LakshmiKanth Tokens (15 * 1e18)
 deadline: 1742680400
 
-EtherScan: https://ropsten.etherscan.io/tx/0x0ab34bb2e07369d6a38513f8a1f3664e761ae516acca13ab6f3ef903e45f199b
+EtherScan: https://ropsten.etherscan.io/tx/0xaff9a02459ba51eb29049cc7ecbfc1b3cf1090c6a442b31ef2266246cd3b3f0a
 
-EtherScan Logs: https://ropsten.etherscan.io/tx/0x0ab34bb2e07369d6a38513f8a1f3664e761ae516acca13ab6f3ef903e45f199b#eventlog
+EtherScan Logs: https://ropsten.etherscan.io/tx/0xaff9a02459ba51eb29049cc7ecbfc1b3cf1090c6a442b31ef2266246cd3b3f0a#eventlog
 
+#### Verify Uniswap V1 Tokens added to transactionMaker:
+
+![Add_Liquidity_Uniswap_Token_Position](./images/Add_Liquidity_Uniswap_Token_Position.png)
 
 #### Verify the Funding of Tokens to ExchangeContract
 
