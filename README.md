@@ -270,11 +270,11 @@ Summary
     |#|	FileName | Command |	Addresses |	Description|
     | --- | --- |--- |--- |--- |
     |0| [CreateUniswapTokenExchangeContract](./scripts/CreateUniswapTokenExchangeContract.js) | node commands/CreateUniswapTokenExchangeCommand.js |	| Create a Uniswap-Exchange-Contract for ERC20 Token |
-    |1|	[QueryUniswapTokenExchangeContract](./scripts/QueryUniswapTokenExchangeContract.js)   |node command/QueryUniswapTokenExchangeContractCommand.js || Query the Exchange-Contract address using Uniswap Exchange Factory Contract|
-    |3|	[ApproveTokenSpendingForUniswapExchangeContract](./scripts/ApproveTokenSpendingForUniswapExchangeContract.js)  |node command/ApproveTokenSpendingCommand.js   |	| Approve Spending of ERC20 token for the Exchange-Contract|
-    |4|	[AddLiquidityToExchangeContract](./scripts/AddLiquidityToExchangeContract.js)  | node command/AddLiquidityCommand.js   |	| Add Liquidity ERC20, ETH to the ERC20-Exchange-Contract|
-    |5|	[SwapETHForERC20Token](./scripts/SwapETHForERC20Token.js)  | node command/SwapETHForERC20Command.js -- ethForSpending=1|	| User to sell ETH and buy ERC20 Token available on ERC20-Exchange-Contract|
-    |6|	[SwapERC20ForERC20Token](.scripts/SwapERC20ForERC20Token.js) | node command/SwapERC20ForERC20Command.js  --receivableERC20Address= '0xe343dsdwe'
+    |1|	[QueryUniswapTokenExchangeContract](./scripts/QueryUniswapTokenExchangeContract.js)   |node commands/QueryUniswapTokenExchangeContractCommand.js || Query the Exchange-Contract address using Uniswap Exchange Factory Contract|
+    |3|	[ApproveTokenSpendingForUniswapExchangeContract](./scripts/ApproveTokenSpendingForUniswapExchangeContract.js)  |node commands/ApproveTokenSpendingCommand.js   |	| Approve Spending of ERC20 token for the Exchange-Contract|
+    |4|	[AddLiquidityToExchangeContract](./scripts/AddLiquidityToExchangeContract.js)  | node commands/AddLiquidityCommand.js --liquidity=1   |	| Add Liquidity ERC20, ETH to the ERC20-Exchange-Contract|
+    |5|	[SwapETHForERC20Token](./scripts/SwapETHForERC20Token.js)  | node commands/SwapETHForERC20Command.js  --ethForSpending=1|	| User to sell ETH and buy ERC20 Token available on ERC20-Exchange-Contract|
+    |6|	[SwapERC20ForERC20Token](.scripts/SwapERC20ForERC20Token.js) | node commands/SwapERC20ForERC20Command.js  --receivableERC20Address= '0x20fE562d797A42Dcb3399062AE9546cd06f63280'
      --maxLinkTokensForPurchase= '100'
      --maxLinkTokensForSale= '1000000000'
      --maxEthForSpending= '1'  |	| User to swap ERC20 token for another ERC20 token|
@@ -346,13 +346,13 @@ SwapETHForERC20Token
  - LakshmiKanthTokens as well as ETH will be added as Liquidity to the Exchange Token Contract
 
  ```sh
-  node command/AddLiquidityCommand.js
+  node commands/AddLiquidityCommand.js --liquidity=1
  ```
 
  - Terminal Logs:
 
  ```
- sent 0x0ab34bb2e07369d6a38513f8a1f3664e761ae516acca13ab6f3ef903e45f199b
+Successfully Added liquidity: 1 and transactionHash is: 0x838d0544bf7c1e8550aec689284992411899180779e5b2303b1cab09cadb4420
  ```
 
 - Event Emitted from AddLiquidity Function Call:
@@ -383,14 +383,15 @@ EtherScan Logs: https://ropsten.etherscan.io/tx/0x0ab34bb2e07369d6a38513f8a1f366
 - Command to execute:
 
 ```sh
- node scripts/SwapETHForERC20Token.js 
+ node commands/SwapETHForERC20Command.js  --ethForSpending=1
 ```
 
 - terminal Logs:
 
 ```
-etherToSpendForERC20: 0xb1a2bc2ec50000 - inEth: 0.05
-sent 0x36d2688d61d8137329b5bfb73ac5dcb6cc4e443462507026903ef2021ffaf40e
+ethForSpending in command trigger : 1
+etherToSpendForERC20 In Hex: 0x2386f26fc10000 - inEth: 0.01
+completed swapping ETH for ERC20 Script
 ```
 
 - Etherscan Proofs:
@@ -419,7 +420,7 @@ sent 0x36d2688d61d8137329b5bfb73ac5dcb6cc4e443462507026903ef2021ffaf40e
  - Run command to swap ERC20 Tokens
 
  ```sh
-    node scripts/SwapERC20ForERC20Token.js 
+    node commands/SwapERC20ForERC20Command.js  --receivableERC20Address='0x20fE562d797A42Dcb3399062AE9546cd06f63280' --maxLinkTokensForPurchase='10'   --maxLinkTokensForSale='50'  --maxEthForSpending='1' 
  ```
 
  - Terminal Logs:

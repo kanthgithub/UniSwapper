@@ -1,11 +1,11 @@
 const AddLiquidityToExchangeContract = require('../scripts/AddLiquidityToExchangeContract');
 
 const argv = require("minimist")(process.argv.slice(), {
-  string: ["tokenAddress"]
+  int: ['liquidity'],
 });
 
-async function addLiquidity(){
-  return await AddLiquidityToExchangeContract.addLiquidity();
+async function addLiquidity(liquidity){
+  return await AddLiquidityToExchangeContract.addLiquidity(liquidity);
 }
 
 // Implement async callback to enable the script to be run by truffle or node.
@@ -13,8 +13,9 @@ async function Main(callback) {
 
 try {
     // Pull the parameters from process arguments. Specifying them like this lets tests add its own.
-    const data = await addLiquidity();
-    console.log(`data: ${data}`);
+    const liquidity = argv.liquidity;
+    const data = await addLiquidity(liquidity);
+    console.log(`Successfully Added liquidity: ${liquidity} and transactionHash is: ${data}`);
   } catch (error) {
     console.error(error);
   }

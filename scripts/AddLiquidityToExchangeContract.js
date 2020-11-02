@@ -2,12 +2,12 @@ const uniswapExchangeContractAbi = require('../abi/exchange.json');
 const TransactionHandler = require('../utils/TransactionHandler');
 
 const AddLiquidityToExchangeContract = {
-  addLiquidity: async () => {
+  addLiquidity: async (liquidity) => {
     //100 lakshmiKanth Tokens to be approved for spending by exchangeContractAddress_LakshmiKanthToken
-    const etherFunding = web3.utils.toHex(1 * 10 ** 17); // 0.1 ETH
+    const etherFunding = TransactionHandler.toHex(1 * 10 ** 17); // 0.1 ETH
 
     const lakshmiKanthTokenQuantityForLiquidity = TransactionHandler.toHex(
-      15 * 10 ** 18
+      liquidity * 10 ** 18
     ); // 15  tokens
 
     const DEADLINE = 1742680400; // deadline = w3.eth.getBlock(w3.eth.blockNumber).timestamp
