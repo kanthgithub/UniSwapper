@@ -388,27 +388,29 @@ EtherScan Logs: https://ropsten.etherscan.io/tx/0x0ab34bb2e07369d6a38513f8a1f366
 ```
 ethForSpending in command trigger : 1
 etherToSpendForERC20 In Hex: 0x2386f26fc10000 - inEth: 0.01
-completed swapping ETH for ERC20 Script
+completed swapping 1 ETH for ERC20 Script - in transaction: 0x27e7facac70cf24b0d0ef048b301ed28c1fdb335e8abf4cc4f33bc394044470e
 ```
 
 - Etherscan Proofs:
 
  - transactionHash: 0x36d2688d61d8137329b5bfb73ac5dcb6cc4e443462507026903ef2021ffaf40e
- - Etherscan Link: https://ropsten.etherscan.io/tx/0x36d2688d61d8137329b5bfb73ac5dcb6cc4e443462507026903ef2021ffaf40e
- - InputData for function from EtherscaN:
+ - Etherscan Link: https://ropsten.etherscan.io/tx/0x27e7facac70cf24b0d0ef048b301ed28c1fdb335e8abf4cc4f33bc394044470e
 
- ```
+ - InputData for function from Etherscan:
+
+ ```js
  Function: ethToTokenSwapInput(uint256 min_tokens, uint256 deadline) ***
 
-    MethodID: 0xf39b5b9b
-    [0]:  0000000000000000000000000000000000000000000000000000000000000001
-    [1]:  0000000000000000000000000000000000000000000000000000000067df3150
+MethodID: 0xf39b5b9b
+[0]:  0000000000000000000000000000000000000000000000000000000000000001
+[1]:  0000000000000000000000000000000000000000000000000000000067df3150
  ``` 
 
+![ETHToERC20_Decoded_Input_Data](./images/ETHToERC20_Decoded_Input_Data.png)
 
  #### Verify the Token transfer transaction on Etherscan (Tonken Tracker: Uniswap V1)
 
-![UniSwap_Swap_ETH_For_ERC20_Token](./images/UniSwap_Swap_ETH_For_ERC20_Token.png)
+![SwapETHForERC20](./images/SwapETHForERC20.png)
  
 -----
 ### Step-6: Buyer with LakshmiKanthToken Assets will exchange LakshmiKanth-Token for the Link Tokens

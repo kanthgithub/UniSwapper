@@ -14,15 +14,18 @@ const SwapERC20ForERC20 = {
     );
 
     const DEADLINE = 1742680400; // deadline = w3.eth.getBlock(w3.eth.blockNumber).timestamp
-    const max_linkTokens_For_Purchase = web3.utils.toWei(
+    const max_linkTokens_For_Purchase = TransactionHandler.toWei(
       maxLinkTokensForPurchase,
       'Ether'
     ); // 10 link tokens '10'
-    const max_linkTokens_Tokens_For_Sale = web3.utils.toWei(
+    const max_linkTokens_Tokens_For_Sale = TransactionHandler.toWei(
       maxLinkTokensForSale,
       'Ether'
     ); //'50'
-    const max_Eth_For_Spending = web3.utils.toWei(maxEthForSpending, 'Ether'); // 1 ETH //'1'
+    const max_Eth_For_Spending = TransactionHandler.toWei(
+      maxEthForSpending,
+      'Ether'
+    ); // 1 ETH //'1'
 
     const tx = contract.methods.tokenToTokenTransferOutput(
       max_linkTokens_For_Purchase,
