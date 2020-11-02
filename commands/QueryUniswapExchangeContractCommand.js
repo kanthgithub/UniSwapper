@@ -1,11 +1,11 @@
-const ApproveTokenSpendingForUniswapExchangeContract = require('../scripts/ApproveTokenSpendingForUniswapExchangeContract');
+const QueryUniswapTokenExchangeContract = require('../scripts/QueryUniswapTokenExchangeContract');
 
 const argv = require("minimist")(process.argv.slice(), {
   string: ["tokenAddress"]
 });
 
-async function approveTokenSpending(){
-  return await ApproveTokenSpendingForUniswapExchangeContract.approveTokenSpending();
+async function queryUniswapTokenExchange(){
+  return await QueryUniswapTokenExchangeContract.queryTokenExchangeContract('0x0e364eb0ad6eb5a4fc30fc3d2c2ae8ebe75f245c');
 }
 
 // Implement async callback to enable the script to be run by truffle or node.
@@ -13,8 +13,8 @@ async function Main(callback) {
 
 try {
     // Pull the parameters from process arguments. Specifying them like this lets tests add its own.
-    await approveTokenSpending();
-    console.log(`completed approve token Spending Script`);
+    const data = await queryUniswapTokenExchange();
+    console.log(`exchangeAddress: ${data}`);
   } catch (error) {
     console.error(error);
   }
@@ -36,5 +36,5 @@ if (require.main === module) {
 }
 
 // Each function is then appended onto to the `Main` which is exported. This enables these function to be tested.
-Main.approveTokenSpending = approveTokenSpending;
+Main.queryUniswapTokenExchange = queryUniswapTokenExchange;
 module.exports = Main;

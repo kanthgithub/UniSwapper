@@ -269,12 +269,15 @@ Summary
 
     |#|	FileName | Command |	Addresses |	Description|
     | --- | --- |--- |--- |--- |
-    |0| [CreateUniswapTokenExchangeContract](./scripts/CreateUniswapTokenExchangeContract.js) | node commands/CreateUniswapTokenExchange.js |	| Create a Uniswap-Exchange-Contract for ERC20 Token |
-    |1|	[QueryUniswapTokenExchangeContract](./scripts/QueryUniswapTokenExchangeContract.js)   |node command/QueryUniswapTokenExchange.js || Query the Exchange-Contract address using Uniswap Exchange Factory Contract|
-    |3|	[ApproveTokenSpendingForUniswapExchangeContract](./scripts/ApproveTokenSpendingForUniswapExchangeContract.js)  |node command/ApproveTokenSpending.js   |	| Approve Spending of ERC20 token for the Exchange-Contract|
+    |0| [CreateUniswapTokenExchangeContract](./scripts/CreateUniswapTokenExchangeContract.js) | node commands/CreateUniswapTokenExchangeCommand.js |	| Create a Uniswap-Exchange-Contract for ERC20 Token |
+    |1|	[QueryUniswapTokenExchangeContract](./scripts/QueryUniswapTokenExchangeContract.js)   |node command/QueryUniswapTokenExchangeContractCommand.js || Query the Exchange-Contract address using Uniswap Exchange Factory Contract|
+    |3|	[ApproveTokenSpendingForUniswapExchangeContract](./scripts/ApproveTokenSpendingForUniswapExchangeContract.js)  |node command/ApproveTokenSpendingCommand.js   |	| Approve Spending of ERC20 token for the Exchange-Contract|
     |4|	[AddLiquidityToExchangeContract](./scripts/AddLiquidityToExchangeContract.js)  | node command/AddLiquidityCommand.js   |	| Add Liquidity ERC20, ETH to the ERC20-Exchange-Contract|
-    |5|	[SwapETHForERC20Token](./scripts/SwapETHForERC20Token.js)  | node command/SwapETHForERC20Token.js  |	| User to sell ETH and buy ERC20 Token available on ERC20-Exchange-Contract|
-    |6|	[SwapERC20ForERC20Token](.scripts/SwapERC20ForERC20Token.js) | node command/SwapERC20ForERC20Token.js    |	| User to swap ERC20 token for another ERC20 token|
+    |5|	[SwapETHForERC20Token](./scripts/SwapETHForERC20Token.js)  | node command/SwapETHForERC20Command.js -- ethForSpending=1|	| User to sell ETH and buy ERC20 Token available on ERC20-Exchange-Contract|
+    |6|	[SwapERC20ForERC20Token](.scripts/SwapERC20ForERC20Token.js) | node command/SwapERC20ForERC20Command.js  --receivableERC20Address= '0xe343dsdwe'
+     --maxLinkTokensForPurchase= '100'
+     --maxLinkTokensForSale= '1000000000'
+     --maxEthForSpending= '1'  |	| User to swap ERC20 token for another ERC20 token|
 SwapETHForERC20Token
 -----
 ### Step-1: Script to create new Exchange-Contract from Factory:
