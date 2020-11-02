@@ -1,7 +1,7 @@
 const AddLiquidityToExchangeContract = require('../scripts/AddLiquidityToExchangeContract');
 
 const argv = require("minimist")(process.argv.slice(), {
-  string: ["poolAddress"]
+  string: ["tokenAddress"]
 });
 
 async function addLiquidity(){
