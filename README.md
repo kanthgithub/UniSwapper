@@ -268,7 +268,7 @@ Summary
  - source directory: all JS files are under `scripts/`  of root directory
 
     |#|	FileName | Command |	Addresses |	Description|
-    | --- | --- |--- |--- |
+    | --- | --- |--- |--- |--- |
     |0| [CreateUniswapTokenExchangeContract](./scripts/CreateUniswapTokenExchangeContract.js) | node commands/CreateUniswapTokenExchange.js |	| Create a Uniswap-Exchange-Contract for ERC20 Token |
     |1|	[QueryUniswapTokenExchangeContract](./scripts/QueryUniswapTokenExchangeContract.js)   |node command/QueryUniswapTokenExchange.js || Query the Exchange-Contract address using Uniswap Exchange Factory Contract|
     |3|	[ApproveTokenSpendingForUniswapExchangeContract](./scripts/ApproveTokenSpendingForUniswapExchangeContract.js)  |node command/ApproveTokenSpending.js   |	| Approve Spending of ERC20 token for the Exchange-Contract|
