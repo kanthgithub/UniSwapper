@@ -283,7 +283,7 @@ SwapETHForERC20Token
  - Run javaScript file: 
 
 ```sh
-    node ./scripts/CreateUniswapTokenExchangeContract.js
+    node commands/CreateUniswapTokenExchangeCommand.js
 ```
 
 #### Script Execution Log:
@@ -307,7 +307,7 @@ SwapETHForERC20Token
 
  - Execute command to Query the ExchangeContract Address for LakshmiKanthToken
 ```sh
-    node scripts/QueryUniswapTokenExchangeContract.js 
+    node commands/QueryUniswapTokenExchangeContractCommand.js 
 ```
 
 - Terminal Logs:
@@ -324,7 +324,7 @@ SwapETHForERC20Token
  - This is also considered as adding liquidity to Uniswap-Exchange-Contract
 
  ```sh
-    node command/ApproveTokenSpending.js 
+    node commands/ApproveTokenSpendingCommand.js 
  ```
 
  - Terminal Log:
